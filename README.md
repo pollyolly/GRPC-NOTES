@@ -17,3 +17,7 @@ $ protoc --version
 [Rust gRPC](https://konghq.com/blog/engineering/building-grpc-apis-with-rust)
 
 [Tonic](https://github.com/pollyolly/tonic)
+
+[Rust gRPC Authentication Git](https://github.com/anshulrgoyal/rust-grpc-demo)
+
+[Rust gRPC Authentication Blog](https://dev.to/anshulgoyal15/a-beginners-guide-to-grpc-with-rust-3c7o)
