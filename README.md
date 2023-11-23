@@ -1,13 +1,14 @@
 ## GRPC-NOTES
 ### Installation gRPC Protobuf
 [Installation](https://grpc.io/docs/protoc-installation/#binary-install)
+
+MacOS
 ```vim
-//MacOS
 $ brew install protobuf
 $ protoc --version 
 ```
+Linux
 ```vim
-//Linux
 $ apt install -y protobuf-compiler
 $ protoc --version 
 ```
