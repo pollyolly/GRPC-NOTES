@@ -23,3 +23,5 @@ $ protoc --version
 [Rust gRPC Authentication Blog](https://dev.to/anshulgoyal15/a-beginners-guide-to-grpc-with-rust-3c7o)
 
 [Rust gRPC Database Blog](https://tjtelan.com/blog/using-a-database-grpc-with-rust/)
+
+[Rust gRPC Client Blog](https://tjtelan.com/blog/lets-build-a-single-binary-grpc-server-client-with-rust-in-2020/)
