@@ -10,7 +10,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut client = SayClient::new(channel);
     let request = tonic::Request::new(SayRequest {
-            name:String::from("Rolly")
+            name:String::from("John Mark")
         },
     );
     let mut response = client.send_stream(request).await?.into_inner();
