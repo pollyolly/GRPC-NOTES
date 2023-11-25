@@ -13,8 +13,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             name:String::from("John Mark")
         },
     );
+    //the response is stream
     let mut response = client.send_stream(request).await?.into_inner();
-
+    //listening to stream
     while let Some(res) = response.message().await? {
         println!("NOTE = {:?}", res);
     }

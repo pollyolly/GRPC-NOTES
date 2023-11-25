@@ -1,5 +1,8 @@
 ## Streaming Response
-
+```
+Sending data without waiting for client request
+Used stream keyword in rpc to call stream of messages in SayResponse.
+```
 ### Run
 Server
 ```

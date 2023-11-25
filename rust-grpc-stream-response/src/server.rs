@@ -9,21 +9,25 @@ pub struct MySay {}
 
 #[tonic::async_trait]
 impl Say for MySay {
-
+    //specify output of rpc call
     type SendStreamStream = mpsc::Receiver<Result<SayResponse,Status>>;
-
-    //Send function in .proto
+    //implementation of rpc call
+    //Send function in chat.proto
      async fn send_stream(&self, request:Request<SayRequest>)->Result<Response<Self::SendStreamStream>,Status>{
+        //create a queue or channel
         let (mut tx, rx) = mpsc::channel(4);
-
+        //creating new task
         tokio::spawn(async move {
+        //looping and sending response using stream
             for _ in 0..4 {
+        //sending response to channel
                 tx.send(Ok(SayResponse {
                    message: format!("hello"), 
                 }))
                 .await;
             }
         });
+        //returning reciever to tonic can listen on receiver and send response
         Ok(Response::new(rx))
      }
      async fn send(&self, request: Request<SayRequest>) -> Result<Response<SayResponse>, Status> {

@@ -2,7 +2,9 @@ syntax = "proto3";
 package hello;
 
 service Say {
+  //function Send can be called in server.rs file
   rpc Send (SayRequest) returns (SayResponse);
+  //stream SayResponse, to return stream messages
   rpc SendStream(SayRequest) returns (stream SayResponse);
 }
 
