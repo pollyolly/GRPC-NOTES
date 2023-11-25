@@ -1,0 +1,17 @@
+syntax = "proto3";
+package hello;
+
+service Say {
+  // take a stream and return a stream
+  rpc Bidirectional (stream SayRequest) returns (stream SayResponse);
+}
+
+message SayRequest {
+  // data type and position of data
+  string name = 1;
+}
+
+message SayResponse {
+  // data type and position of data
+  string message = 1;
+}
