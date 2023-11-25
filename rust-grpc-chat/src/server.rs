@@ -8,7 +8,7 @@ pub struct MySay {}
 
 #[tonic::async_trait]
 impl Say for MySay {
-    //Send function in .proto
+    //Send function in chat.proto
      async fn send(&self, request:Request<SayRequest>)->Result<Response<SayResponse>,Status>{
           Ok(Response::new(SayResponse{
                message:format!("hello {}", request.get_ref().name),
