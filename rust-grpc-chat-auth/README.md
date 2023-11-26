@@ -36,7 +36,7 @@ Generate key for client
 ```
 $ openssl genrsa -out chat_client.key 2048
 ```
-Sign server key to generate our chat_client.csr
+Sign client key to generate our chat_client.csr
 ```
 $ openssl req -new -sha256 -key chat_client.key -out chat_client.csr
 ```
@@ -75,9 +75,7 @@ tokio = {version="0.2", features=["stream","macros"]}
 ```
 When generating extension file: error loading the config file 'chat_server.ext'
 ```
-Add: -extensions v3_ca
-
-$ 
+make sure to create first the extfile chat_server.ext
 ```
 ### Reference
 [Beginner Guide to gRPC](https://dev.to/anshulgoyal15/a-beginners-guide-to-grpc-with-rust-3c7o)
